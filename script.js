@@ -41,7 +41,7 @@ form.addEventListener('submit', function(event) {
         formData.forEach((value, key) => {
             data[key] = value;
         });
-        fetch('http://localhost:8080/api/visitors/addVisitorData', {
+        fetch('https://test-node-server-6pp3.onrender.com/api/visitors/addVisitorData', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
