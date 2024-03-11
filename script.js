@@ -30,7 +30,7 @@ function showSuccessPopup() {
         successModal.style.display = 'none';
         successPopup.style.display = 'none';
         successPopup.classList.remove('animate__animated', 'animate__bounceIn');
-    }, 6000); // 6000 milliseconds (6 seconds) in this example
+    }, 10000); // 6000 milliseconds (10 seconds) in this example
 }
 
 form.addEventListener('submit', function(event) {
