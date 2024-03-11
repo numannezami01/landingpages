@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class='main'>
+        <div class='left'>
+            <img class="logo" src="/assets/fcdlogo2.png" alt="logo">
+          <!-- <div class='curve'>
+            <div class='white'></div>
+          </div> -->
+          <div class='Homeloan'>
+            <div class='bubble'>
+                <div class='smallbubble'></div>
+                <div class='smallbubbles'></div>
+              </div>
+              <h3>Planning for Loan</h3>
+            <div class='para'>
+              <div class='span'></div>
+              <p class='p'>
+                Unlock your dreams with our tailored loans. Competitive rates and hassle-free processes. Start building your brighter tomorrow today.
+              </p>
+            </div>
+        
+            <div class="info">
+                <a href="https://fastcreditdeal.com">More Info</a> <i class="ri-arrow-right-circle-line arw"></i>
+            </div>
+          </div>
+        </div>
+        <!-- <img src="/assets/caller.png" alt="caller"> -->
+  
+        <div class='right'>
+            <!-- <img src="Home.jpg" alt="" /> -->
+            <!-- <form id="loanForm">
+                <div id="step1" class="step">
+                  <input type="hidden" name="dataSource" value="facebook">
+                  <input type="text" name="customerName" placeholder="Full Name" required>
+                  <input type="text" name="contact" placeholder="Mobile Number" required>
+                  <button type="submit">Submit</button>
+                </div>
+              </form> -->
+              <div class="container">
+                <div class="text">
+                    Unlock Best Loan Offers From 25+ Lenders
+                </div>
+                <form id="loanForm">
+                   <div class="form-row">
+      <input type="hidden" name="dataSource" value="sms">
+                      <div class="input-data">
+                        <input type="text" name="customerName" required>
+                         <div class="underline"></div>
+                         <label for="">Full Name</label>
+                      </div>
+                    
+                   </div>
+                   <div class="form-row">
+                    <div class="input-data">
+                        <input type="text" name="contact" id="contact" required>
+                        <div class="underline"></div>
+                        <label for="contact">Mobile Number</label>
+                        <span class="error-message" style="color: red; font-size: 13px;"></span>
+                    </div>
+                </div>
+                   <div class="dd">
+                       <label for="" class="lbl">D-O-B</label>
+                       <input type="date" name="dob" class="dob">
+                    </div>
+                   <!-- <div class="form-row">
+                   <div class="input-data textarea">
+                      <textarea rows="8" cols="80" required></textarea>
+                      <br />
+                      <div class="underline"></div>
+                      <label for="">Write your message</label>
+                      <br /> -->
+                      <div class="form-row submit-btn">
+                         <div class="input-data">
+                            <div class="inner"></div>
+                            <input id="button" class="ready" type="submit" value="submit" onclick="clickButton();">
+                         </div>
+                         <!-- <button id="button" type="submit" class="ready" onclick="clickButton();"> -->
+  
+                            <!-- <div class="message submitMessage">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12.2">
+                                <polyline stroke="currentColor" points="2,7.1 6.5,11.1 11,7.1 "/>
+                                <line stroke="currentColor" x1="6.5" y1="1.2" x2="6.5" y2="10.3"/>
+                              </svg> <span class="button-text">Submit</span>
+                            </div> -->
+                            
+                            <div class="message loadingMessage">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+                                <circle class="loadingCircle" cx="2.2" cy="10" r="1.6"/>
+                                <circle class="loadingCircle" cx="9.5" cy="10" r="1.6"/>
+                                <circle class="loadingCircle" cx="16.8" cy="10" r="1.6"/>
+                              </svg>
+                            </div>
+                            
+                            <div class="message successMessage">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+                                <polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 "/>
+                              </svg> 
+                            </div>
+                          </button>
+                      </div>
+
+                     
+                      
+                      
+                      <!-- Website Corner Link -->
+                      <a class="website-link" href="https://fastcreditdeal.com" target="_blank" rel="noopener noreferrer">
+                      </a>
+                </form>
+                </div>
+        </div>
+        <div class="successPopupModal">
+            <div id="successPopup" class="success-popup">
+                <div class="success-content">
+                    <img class="succ" src="/assets/sucgreen.png" alt="success">
+                   <h4>Congratulations</h4>
+                  <p class="pp">We're delighted to inform you that your form has been successfully submitted, Stay tuned for a welcoming and supportive call from our dedicated team member, who is excited to assist you with any further inquiries or needs.
+                    </p>
+                </div>
+                <div class="confetti-container">
+                  <!-- Confetti particles will be generated here -->
+                  <canvas id="canvas"></canvas>
+                </div>
+              </div>
+        </div>
+        
+          <script src="anim.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
