@@ -52,6 +52,7 @@ form.addEventListener("submit", function (event) {
         if (response.ok) {
           console.log("Data submitted successfully");
           showSuccessPopup();
+          console.log("okkk");
           form.reset();
         } else {
           console.error("Error submitting data");
@@ -74,42 +75,44 @@ answers.forEach((event) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all accordion questions
+  const accordions = document.querySelectorAll(".accordion__question");
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Get all accordion questions
-    const accordions = document.querySelectorAll('.accordion__question');
-
-    accordions.forEach((accordion) => {
-        accordion.addEventListener('click', function() {
-            // Optionally, toggle the current one without affecting others
-            const currentAnswer = this.nextElementSibling;
-            if (currentAnswer.style.display === "none" || !currentAnswer.style.display) {
-                // Close all answers
-                document.querySelectorAll('.accordion__answer').forEach((answer) => {
-                    answer.style.display = 'none';
-                });
-
-                // Show the clicked one
-                currentAnswer.style.display = 'block';
-            } else {
-                currentAnswer.style.display = 'none'; // This line is if you want to allow toggling close by re-clicking the same question
-            }
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function () {
+      // Optionally, toggle the current one without affecting others
+      const currentAnswer = this.nextElementSibling;
+      if (
+        currentAnswer.style.display === "none" ||
+        !currentAnswer.style.display
+      ) {
+        // Close all answers
+        document.querySelectorAll(".accordion__answer").forEach((answer) => {
+          answer.style.display = "none";
         });
+
+        // Show the clicked one
+        currentAnswer.style.display = "block";
+      } else {
+        currentAnswer.style.display = "none"; // This line is if you want to allow toggling close by re-clicking the same question
+      }
     });
+  });
 });
 
-var swiper = new Swiper('.swiper', {
+var swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   slidesPerGroup: 3,
   loop: true,
   loopFillGroupWithBlank: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
